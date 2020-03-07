@@ -97,7 +97,7 @@ public class XmlDigitalSignatureGenerator {
 		Reference ref = null;
 		SignedInfo signedInfo = null;
 		try {
-			ref = xmlSigFactory.newReference("employeesalary.xml",
+			ref = xmlSigFactory.newReference(originalXmlFilePath,
 					xmlSigFactory.newDigestMethod(DigestMethod.SHA1, null));
 			signedInfo = xmlSigFactory.newSignedInfo(
 					xmlSigFactory.newCanonicalizationMethod(CanonicalizationMethod.INCLUSIVE,
